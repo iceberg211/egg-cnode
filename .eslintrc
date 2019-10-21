@@ -5,5 +5,8 @@
     "sourceType": "script",
     "ecmaFeatures": {
     }
+  },
+  "rules":{
+    "linebreak-style":"off"
   }
 }
