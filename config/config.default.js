@@ -20,7 +20,7 @@ module.exports = appInfo => {
 
   config.host = 'http://cnodejs.org';
 
-  config.session_secret = 'node_club_secret'; // 务必修改
+  config.session_secret = 'node_club_secret_byhewei'; // 务必修改
 
   // add your config here
   config.middleware = [ 'locals', 'authUser', 'blockUser', 'errorPage', 'errorHandler' ];

@@ -71,9 +71,9 @@ class SignController extends Controller {
     // create gravatar
     const avatarUrl = service.user.makeGravatar(email);
 
-    await service.user.newAndSave(loginname, loginname, passhash, email, avatarUrl, false);
+    await service.user.newAndSave(loginname, loginname, passhash, email, avatarUrl, true);
     // 发送激活邮件
-    // await service.mail.sendActiveMail(email, utility.md5(email + passhash + config.session_secret), loginname);
+    await service.mail.sendActiveMail(email, utility.md5(email + passhash + config.session_secret), loginname);
     await ctx.render('sign/signup', {
       success: '欢迎加入 ' + config.name + '！我们已给您的注册邮箱发送了一封邮件，请点击里面的链接来激活您的帐号。',
     });
